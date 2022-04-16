@@ -5,6 +5,18 @@ VisualStudioVersion = 17.1.32328.378
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlutoRover.Api", "PlutoRover.Api\PlutoRover.Api.csproj", "{B08941C1-CDB0-4E6F-B01D-D6639096359B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.- Services", "1.- Services", "{DB1B2004-7CAD-46E1-B8AE-597D908E866E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.- Application", "2.- Application", "{C7C2A9E5-513D-4104-AE7C-6987E3C51D70}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.- Domain", "3.- Domain", "{FB503A1D-55A4-4ED8-BC4B-852DAA9CF587}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlutoRover.Domain", "PlutoRover.Domain\PlutoRover.Domain.csproj", "{C296E9E3-C8C3-4B5A-9D85-7A49A83A3ED3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlutoCover.Domain.Tests", "PlutoCover.Domain.Tests\PlutoCover.Domain.Tests.csproj", "{D3338FCC-6945-405D-BEBA-B1FAD0AD28B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlutoRover.Api.Tests", "PlutoRover.Api.Tests\PlutoRover.Api.Tests.csproj", "{45C77BBA-A6F2-4A87-8594-7DEC29B0DA34}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,9 +27,27 @@ Global
 		{B08941C1-CDB0-4E6F-B01D-D6639096359B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B08941C1-CDB0-4E6F-B01D-D6639096359B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B08941C1-CDB0-4E6F-B01D-D6639096359B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C296E9E3-C8C3-4B5A-9D85-7A49A83A3ED3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C296E9E3-C8C3-4B5A-9D85-7A49A83A3ED3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C296E9E3-C8C3-4B5A-9D85-7A49A83A3ED3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C296E9E3-C8C3-4B5A-9D85-7A49A83A3ED3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3338FCC-6945-405D-BEBA-B1FAD0AD28B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3338FCC-6945-405D-BEBA-B1FAD0AD28B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3338FCC-6945-405D-BEBA-B1FAD0AD28B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3338FCC-6945-405D-BEBA-B1FAD0AD28B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45C77BBA-A6F2-4A87-8594-7DEC29B0DA34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45C77BBA-A6F2-4A87-8594-7DEC29B0DA34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45C77BBA-A6F2-4A87-8594-7DEC29B0DA34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45C77BBA-A6F2-4A87-8594-7DEC29B0DA34}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B08941C1-CDB0-4E6F-B01D-D6639096359B} = {DB1B2004-7CAD-46E1-B8AE-597D908E866E}
+		{C296E9E3-C8C3-4B5A-9D85-7A49A83A3ED3} = {FB503A1D-55A4-4ED8-BC4B-852DAA9CF587}
+		{D3338FCC-6945-405D-BEBA-B1FAD0AD28B4} = {FB503A1D-55A4-4ED8-BC4B-852DAA9CF587}
+		{45C77BBA-A6F2-4A87-8594-7DEC29B0DA34} = {DB1B2004-7CAD-46E1-B8AE-597D908E866E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E92B1ED0-4B1E-4378-8645-48C597A18561}

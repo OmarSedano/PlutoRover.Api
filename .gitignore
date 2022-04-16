@@ -2,4 +2,8 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/.vs/PlutoRover.Api/v17
+# directories vs
+**/bin
+**/obj
+**/v17
+/.vs/PlutoRover.Api/DesignTimeBuild/.dtbcache.v2
