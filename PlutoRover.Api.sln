@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32328.378
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlutoRover.Api", "PlutoRover.Api\PlutoRover.Api.csproj", "{B08941C1-CDB0-4E6F-B01D-D6639096359B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlutoRover.Api", "PlutoRover.Api\PlutoRover.Api.csproj", "{B08941C1-CDB0-4E6F-B01D-D6639096359B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.- Services", "1.- Services", "{DB1B2004-7CAD-46E1-B8AE-597D908E866E}"
 EndProject
@@ -11,11 +11,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.- Application", "2.- Appl
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.- Domain", "3.- Domain", "{FB503A1D-55A4-4ED8-BC4B-852DAA9CF587}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlutoRover.Domain", "PlutoRover.Domain\PlutoRover.Domain.csproj", "{C296E9E3-C8C3-4B5A-9D85-7A49A83A3ED3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlutoRover.Domain", "PlutoRover.Domain\PlutoRover.Domain.csproj", "{C296E9E3-C8C3-4B5A-9D85-7A49A83A3ED3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlutoCover.Domain.Tests", "PlutoCover.Domain.Tests\PlutoCover.Domain.Tests.csproj", "{D3338FCC-6945-405D-BEBA-B1FAD0AD28B4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlutoCover.Domain.Tests", "PlutoCover.Domain.Tests\PlutoCover.Domain.Tests.csproj", "{D3338FCC-6945-405D-BEBA-B1FAD0AD28B4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlutoRover.Api.Tests", "PlutoRover.Api.Tests\PlutoRover.Api.Tests.csproj", "{45C77BBA-A6F2-4A87-8594-7DEC29B0DA34}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlutoRover.Api.Tests", "PlutoRover.Api.Tests\PlutoRover.Api.Tests.csproj", "{45C77BBA-A6F2-4A87-8594-7DEC29B0DA34}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution items", "Solution items", "{B92608A2-9379-48DC-AEC7-EE29B33576A1}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		Readme.md = Readme.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
