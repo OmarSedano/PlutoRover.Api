@@ -1,4 +1,3 @@
-using PlutoRover.Api.Services;
 using PlutoRover.Domain.Services;
 
 var builder = WebApplication.CreateBuilder(args);

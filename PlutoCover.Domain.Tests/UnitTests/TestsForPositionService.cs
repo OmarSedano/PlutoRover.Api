@@ -1,5 +1,7 @@
 ﻿
+using CSharpFunctionalExtensions;
 using FluentAssertions;
+using Moq;
 using NUnit.Framework;
 using PlutoRover.Domain.Models;
 using PlutoRover.Domain.Services;
@@ -8,12 +10,9 @@ namespace PlutoCover.Domain.Tests.UnitTests
 {
     public class TestsForPositionService
     {
-        private IPositionService _sut;
-
         [SetUp]
         public void SetUp()
         {
-            _sut = new PositionService();
         }
 
         [Test]
@@ -28,15 +27,42 @@ namespace PlutoCover.Domain.Tests.UnitTests
         public void Should_SetPosition(string commands, uint xInitial, uint yInitial, char orientationInitial, uint xFinal, uint yFinal, char orientationFinal)
         {
             //Arrange
+            var validatorServiceMock = new Mock<IValidatorService>();
+            validatorServiceMock.Setup(x => x.Validate(It.IsAny<string>()))
+                .Returns(Result.Success());
+
+            var sut = new PositionService(validatorServiceMock.Object);
+
             var rover = new Rover(xInitial, yInitial, orientationInitial);
 
             //Act
-            _sut.SetPosition(commands, rover);
+            var result = sut.SetPosition(commands, rover);
 
             //Assert
+            result.Should().Be(Result.Success());
             rover.Position.X.Should().Be(xFinal);
             rover.Position.Y.Should().Be(yFinal);
             rover.Position.Orientation.Should().Be(orientationFinal);
+        }
+
+        [Test]
+        public void Should_ReturnFailedResult_WhenInvalidCommands()
+        {
+            //Arrange
+            var validatorServiceMock = new Mock<IValidatorService>();
+            validatorServiceMock.Setup(x => x.Validate(It.IsAny<string>()))
+                .Returns(Result.Failure("error"));
+
+            var rover = new Rover();
+            var commands = "ALEI";
+
+            var sut = new PositionService(validatorServiceMock.Object);
+
+            //Act
+            var result = sut.SetPosition(commands, rover);
+
+            //Assert
+            result.Should().Be(Result.Failure("error"));
         }
     }
 }

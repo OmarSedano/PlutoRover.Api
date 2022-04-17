@@ -1,4 +1,4 @@
-﻿namespace PlutoRover.Api.Models
+﻿namespace PlutoRover.Domain.Models
 {
     public class PositionModel
     {
